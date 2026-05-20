@@ -1,0 +1,75 @@
+body header a {
+    padding: 10rem;
+    color: darkslategray;
+    text-decoration: none;
+}
+
+body header {
+    background-color: lightblue;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    margin: 0 auto;
+    display: flex;
+}
+
+main {
+    max-width: 840px;
+}
+
+main h1 {
+    padding: 1rem;
+    padding-top: 0;
+
+}
+
+main p {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+aside {
+    width: 20 rem;
+    margin: 0 none;
+    border: 1px solid rbg(0 0 0/ 0.2);
+    padding: 1 rem;
+    background-color: #eee;
+    color: #333;
+    text-aling: center;
+    max-width: 840px;
+
+}
+
+aside p {
+    padding: 1rem;
+
+}
+
+aside h2 {
+    padding: 1rem;
+    padding-bottom: 0rem;
+    margin: 0 none;
+
+}
+
+aside img {
+    padding: 0 1rem;
+    width: 300px;
+    height: auto;
+}
+
+main img {
+    padding: 1rem;
+    width: 150px;
+    height: auto;
+}
+
+p {
+    padding: 0;
+}
+
+footer {
+    margin-top: 15px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
