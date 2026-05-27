@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body header a {
     padding: 10rem;
     color: darkslategray;
@@ -49,6 +54,9 @@ aside h2 {
     padding: 1rem;
     padding-bottom: 0rem;
     margin: 0 none;
+    position: absolute;
+    top: 47px;
+    left: 150px;
 
 }
 
@@ -59,6 +67,7 @@ aside img {
 }
 
 main img {
+    float: right;
     padding: 1rem;
     width: 150px;
     height: auto;
@@ -72,4 +81,10 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+}
+/*Class Selectors*/
+.box {
+    background-color: lightblue;
+    padding: 1rem;
+    margin: 1rem;
 }
