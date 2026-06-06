@@ -1,7 +1,7 @@
 :root{
     --primary-color: #0a3d62;
-    --secondary-color: #1abc9c;
-    --accent1-color: #09a281;
+    --secondary-color: #0d7a63;
+    --accent1-color: #056b54;
     --accent2-color: #b35c00;
     --heading-font: "Times New Roman", "georgia", serif;
     --body-font: "Arial", "Helvetica", sans-serif;
@@ -38,7 +38,7 @@ nav ul{
 }
 body{
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--secondary-color);
 }
 header,main,footer, aside{
     max-width: 840px;
@@ -59,7 +59,7 @@ footer p{
 }
 h1,h2{
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 nav,p,article{
     margin: 16px;
