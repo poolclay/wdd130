@@ -96,7 +96,7 @@ main div{
 .history h2{
     grid-column: 1 / -1;
     text-align: center;
-    margin : 0, auto;
+    margin : auto;
 }
 .history img{
     width: 100%;
@@ -122,7 +122,7 @@ main div{
 .adventure h2{
     grid-column: 1 / -1;
     text-align: center;
-    margin : 0, auto;
+    margin : auto;
 }
 .adventure img{
     width: 100%;
@@ -138,15 +138,13 @@ main div{
 .hero h1{
     justify-content: flex-start;
     text-align: center;
-    margin : 0, auto;
+    margin : auto;
     position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-
-  background-color: var(--accent1-color);
-  color: #fff
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--accent1-color);
+    color: #fff
 }
 
 
@@ -279,7 +277,7 @@ button {
     width: 100%;
     padding: 8px;
     background-color: #e0e0e0;
-    border: 1px solid #adadad;
+    border: 1px solid rgb(30, 30, 30);
     border-radius: 4px;
     font-size: 14px;
     cursor: pointer;
@@ -297,14 +295,21 @@ button:hover {
 .employees h2{
     grid-column: 1 / -1;
     text-align: center;
-    margin : 0, auto;
+    margin : auto;
 }
 .employees img{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;     
+    gap: 20px;                     
     width: 100%;
-    height: auto;
+    margin: 0 auto;                
+    max-width: 250px;             
+    aspect-ratio: 4 / 5;          
+    overflow: hidden;             
+    border: 1px solid #ddd;     
+    background-color: #fff;
     padding: 5px;
-    margin: 5px;
-    border: 1px solid rgb(0 0 0 / 0.1);
 }
 .employees figcaption{
     text-align: center;
