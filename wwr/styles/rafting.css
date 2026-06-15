@@ -2,18 +2,14 @@
     --secondary-color: #941100;
     --accent1-color: #056b54;
     --accent2-color: #b35c00;
-    --heading-font: 'Trebuchet MS', sans-serif;
-    --body-font: "Chelsea Market", system-ui;
+    --heading-font:  "Chelsea Market", system-ui;
+    --body-font:'Trebuchet MS', sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-input, textarea, select {
-    color: var(--secondary-color) !important;
-    font-family: var(--body-font) !important;
 }
 
 
@@ -25,306 +21,482 @@ header {
     height: 15vh;
     background-color: #ffffff;
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
-    padding: 0px 50px; 
+    padding: 0px 50px;
     z-index: 100;
-}
-.hero,.history,.adventure,.main-contact,.employees{
-    width: 840px;
-    align-self: center;
-    justify-self: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
 header img {
-    height: auto; 
+    height: 60px;
     width: auto;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 45px; 
-    margin-left: 80px; 
+    gap: 45px;
+    margin-left: 80px;
 }
 
 nav ul li a {
-    text-decoration: none; 
-    font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif; font-weight: bold;
-}
-body{
-    font-family: var(--body-font);
-    color: var(--secondary-color);
-}
-body * {
-    color: inherit;
-}
-
-footer{
-    display: flex;
-    justify-content: center;
-    background-color: var(--secondary-color);
-    flex-wrap: wrap;
-}
-footer p{
-    color: #fff;
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-
-}
-h1,h2{
-    font-family: var(--heading-font);
-    color: var(--secondary-color);
-}
-
-.socialmedia a{
     text-decoration: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: rgb(148, 17, 0);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, opacity 0.2s;
 }
+
+nav ul li a:hover {
+    border-bottom: 2px solid rgb(230, 179, 78);
+    opacity: 0.8;
+}
+
+.hero, .history, .adventure, .main-contact, .employees {
+    width: 840px;
+    align-self: center;
+    justify-self: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #941100;
+    padding: 32px 20px 20px;
+    gap: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+    border-top: 4px solid rgb(230, 179, 78);
+}
+
+footer p {
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+    opacity: 0.85;
+    margin: 0;
+}
+
 .socialmedia {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
+.socialmedia a {
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+    display: flex;
+}
+
+.socialmedia a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.socialmedia img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+}
 .hero {
     display: flex;
     position: relative;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;}
-.hero img{
-    width: 100%;
-    height:auto;
-}
-.history{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 auto;
-    padding: 0;
-    padding-block: 8px;
-    
-}   
-.history h2{
-    grid-column: 1 / -1;
-    text-align: center;
-    margin : auto;
-}
-.history img{
-    width: 100%;
-    height: auto;
-    align-self: center;
-    justify-self: center;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid rgb(0 0 0 / 0.1);
-
-}
-.history p{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-self: center;
-}
-.adventure{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding-bottom: 16px;
-}
-.adventure h2{
-    grid-column: 1 / -1;
-    text-align: center;
-    margin : auto;
-}
-.adventure img{
-    width: 100%;
-    height: auto;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid rgb(0 0 0 / 0.1);
-}
-.adventure figcaption{
-    text-align: center;
-    padding: 4px;
-}
-.hero h1{
     justify-content: flex-start;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.hero h1 {
     text-align: center;
-    margin : auto;
-    position: absolute;
-    top: 20px;
     width: 100%;
     padding: 16px;
+    padding-top: 40px;
+    order: -1;
+    font-family: "Chelsea Market", system-ui;
+    color:#941100;
+}
 
+.hero img.background {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
 }
 
 
-main section h2{
-    top: 80px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.8;
-   
-}
+
 .hero article {
     position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;      
-    padding: 12px 24px;
-    margin: 0;          
-    background-color: var(--accent1-color);
+    width: 100%;
+    padding: 16px 32px;
+    margin: 0;
+    background-color:rgb(230, 179, 79, 0.6);
+    backdrop-filter: blur(4px);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    float: right;
+    gap: 20px;
+    z-index: 2;
+    
 }
 
 .hero article p {
-    position: static;
     width: auto;
     max-width: 600px;
     padding: 0;
-    margin: 0;          
+    margin: 0;
     background: none;
-    opacity: 1;
     text-align: left;
+    line-height: 1.7;
+    color: rgb(60, 34, 1);
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 .hero article img {
-    width: 100px;
-    height: auto;
+    width: 90px;
+    height: 90px;
     flex-shrink: 0;
-    float:right;
-
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.4);
 }
-.main-contact{
+
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding-block: 40px;
+    gap: 24px;
+    align-items: center;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(0,0,0,0.08);
+    font-family: "Chelsea Market", system-ui;
+    color: #941100;
+}
+
+.history img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.history p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+    line-height: 1.7;
+    padding: 0 12px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 2vh;
+    font-weight: normal;
+}
+
+.adventure {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-block: 40px;
+    gap: 12px;
+}
+
+.adventure h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(0,0,0,0.08);
+    font-family: "Chelsea Market", system-ui;
+    color: #941100;
+}
+
+.adventure figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.adventure img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.adventure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.adventure figcaption {
+    text-align: center;
+    padding: 4px;
+    font-size: 0.88rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 2vh;
+    font-weight: normal;
+}
+
+main section h2 {
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.85;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
+}
+
+.main-contact {
     display: grid;
     grid-template-columns: 1fr;
-    
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 40px;
 }
-.contact{
+
+.contact {
     display: grid;
     grid-template-columns: 1fr;
     align-self: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    border-left: 4px solid rgb(148, 17, 0);
+    background-color: #fafafa;
 }
-.map iframe{
-    margin: 20px;
+
+.contact h1 {
+    margin-bottom: 16px;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
 }
-.form{
+
+.contact article p {
+    margin: 6px 0;
+    line-height: 1.8;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #333;
+}
+
+.message-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
     gap: 15px;
 }
 
+.form h2 {
+    margin-bottom: 10px;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
 .form-group {
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .form-group label {
-    grid-column: 1 / 2;
-    align-self: center;
     font-weight: bold;
     font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #222;
 }
 
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
-    grid-column: 2 / 3;
     width: 100%;
-    padding: 6px 10px;
-    border: 1px solid #999;
-    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     box-sizing: border-box;
     font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #222;
+    background-color: #f9f9f9;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: rgb(148, 17, 0);
+    box-shadow: 0 0 0 3px rgba(148, 17, 0, 0.15);
+    outline: none;
 }
 
 .form-group textarea {
-    height: 80px;
+    height: 100px;
     resize: vertical;
 }
 
-.radio-block {
-    grid-column: 2 / 3;
+.radio-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
-.radio-block label {
+.radio-group label {
     display: flex;
     align-items: center;
     gap: 8px;
     font-weight: normal;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #333;
 }
 
 .checkbox-group {
-    grid-column: 1 / 3;
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    margin-top: 5px;
 }
 
 .checkbox-group label {
     font-weight: normal;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #333;
 }
 
-button {
-    grid-column: 1 / 3;
+button[type="submit"] {
     width: 100%;
-    padding: 8px;
-    background-color: #f3f3f3;
-    border: 1px solid rgb(30, 30, 30);
-    border-radius: 4px;
+    padding: 10px;
+    background-color: rgb(148, 17, 0);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
     font-size: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.1s;
 }
 
-button:hover {
-    background-color: #d4d4d4;
+button[type="submit"]:hover {
+    background-color: rgba(148, 17, 0, 0.85);
+    transform: translateY(-1px);
 }
-.employees{
+
+.map {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.map h2 {
+    margin-bottom: 10px;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.employees {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 16px;
+    gap: 20px;
+    padding: 30px 0;
 }
-.employees h2{
+
+.employees h2 {
     grid-column: 1 / -1;
     text-align: center;
-    margin : auto;
+    margin-bottom: 20px;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
 }
-.employees img{
+
+.employees figure {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;     
-    gap: 20px;                     
-    width: 100%;
-    margin: 0 auto;                
-    max-width: 250px;             
-    aspect-ratio: 4 / 5;          
-    overflow: hidden;             
-    border: 1px solid #ddd;     
-    background-color: #fff;
-    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: transform 0.2s;
 }
-.employees figcaption{
+
+.employees figure:hover {
+    transform: translateY(-4px);
+}
+
+.employees img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 2px solid rgb(230, 179, 78);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.employees figcaption {
     text-align: center;
     padding: 4px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: rgb(148, 17, 0);
+    font-size: 1rem;
+}
+.home img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 .home img {
   max-width: 100%;
@@ -394,7 +566,7 @@ button:hover {
     grid-row: 4;
 }
 .content h2{
-  color: var(--secondary-color);
+  color: rgb(148, 17, 0);
   font-size: 1.8rem;
   margin-bottom: 28px;
   font-family:  "Chelsea Market", system-ui;
@@ -421,7 +593,7 @@ button:hover {
 }
 
 .newsletter h2 {
-  color: var(--secondary-color);
+  color:  rgb(148, 17, 0);
   font-size: 1.8rem;
   margin-bottom: 28px;
   font-family:  "Chelsea Market", system-ui;
@@ -435,7 +607,7 @@ button:hover {
 }
 
 .newsletter label {
-  color: var(--secondary-color);
+  color:  rgb(148, 17, 0);
   font-size: 0.85rem;
   text-align: left;
   font-family: 'Trebuchet MS', sans-serif; 
@@ -447,7 +619,7 @@ button:hover {
   padding: 12px 16px;
   border-radius: 8px;
   background: #efefef;
-  color: var(--secondary-color);
+  color:  rgb(148, 17, 0);
   font-size: 0.95rem;
   outline: none;
   box-sizing: border-box;
@@ -455,7 +627,7 @@ button:hover {
 
 .newsletter input:focus {
 
-  box-shadow: 0 0 0 3px var(--secondary-color);
+  box-shadow: 0 0 0 3px  rgb(148, 17, 0);
 }
 
 .newsletter button {
@@ -473,7 +645,7 @@ button:hover {
 }
 
 .newsletter button:hover {
-  background: var(--secondary-color);
+  background:  rgb(148, 17, 0);
   transform: translateY(-1px);
 }
 
@@ -504,8 +676,142 @@ button:hover {
     grid-column: 1;
     grid-row: 4;}
 
-.call,.plans,.comparison{
+.call, .plans, .comparison {
     width: 840px;
     justify-self: center;
     align-self: center;
+    padding: 40px 20px;
+}
+
+.call {
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border-left: 4px solid rgb(230, 179, 78);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.call h2 {
+    margin-bottom: 12px;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
+}
+
+.call p {
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+.call a {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid rgb(148, 17, 0);
+    color: rgb(148, 17, 0);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.call a:hover {
+    background-color: rgb(148, 17, 0);
+    color: #fff;
+}
+
+hr {
+    width: 840px;
+    margin: 0 auto;
+    border: none;
+    border-top: 2px solid rgba(148, 17, 0, 0.15);
+}
+
+.plans h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
+}
+
+.plans article {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 12px 24px;
+    margin-bottom: 36px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(148, 17, 0, 0.15);
+}
+
+.plans article:last-child {
+    border-bottom: none;
+}
+
+.plans article h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
+    border-left: 3px solid rgb(230, 179, 78);
+    padding-left: 10px;
+}
+
+.plans article img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 2px solid rgb(230, 179, 78);
+}
+
+.plans article p {
+    align-self: center;
+    line-height: 1.7;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #333;
+}
+
+.comparison h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Chelsea Market", system-ui;
+    color: rgb(148, 17, 0);
+}
+
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.comparison th {
+    padding: 12px 16px;
+    text-align: center;
+    background-color: rgb(148, 17, 0);
+    color: #fff;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.comparison td {
+    padding: 12px 16px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.comparison thead tr {
+    background-color: rgb(148, 17, 0);
+}
+
+.comparison tbody tr:nth-child(even) {
+    background-color: rgba(230, 179, 78, 0.1);
+}
+
+.comparison tbody tr:hover {
+    background-color: rgba(148, 17, 0, 0.07);
 }
