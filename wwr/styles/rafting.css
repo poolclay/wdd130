@@ -1,9 +1,14 @@
 :root {
     --secondary-color: #941100;
-    --accent1-color: #056b54;
-    --accent2-color: #b35c00;
+    --secondary-color-light: rgba(148, 17, 0, 0.07);
+    --secondary-color-mid: rgba(148, 17, 0, 0.15);
+    --secondary-color-hover: rgba(148, 17, 0, 0.85);
+    --gold-accent: #e6b34e;
+    --gold-accent-light: rgba(230, 179, 78, 0.1);
+    --gold-accent-overlay: rgba(230, 179, 79, 0.6);
+    --card-shadow: 0 4px 16px rgba(0,0,0,0.08);
     --heading-font: 'Oswald', sans-serif;
-    --body-font:'Trebuchet MS', sans-serif;
+    --body-font: 'Trebuchet MS', sans-serif;
 }
 
 * {
@@ -43,8 +48,8 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--body-font);
+    color: var(--secondary-color);
     font-size: 0.95rem;
     letter-spacing: 0.5px;
     padding-bottom: 4px;
@@ -53,7 +58,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    border-bottom: 2px solid rgb(230, 179, 78);
+    border-bottom: 2px solid var(--gold-accent);
     opacity: 0.8;
 }
 
@@ -68,11 +73,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #941100;
+    background-color: var(--secondary-color);
     padding: 32px 20px 20px;
     gap: 16px;
-    font-family: 'Trebuchet MS', sans-serif;
-    border-top: 4px solid rgb(230, 179, 78);
+    font-family: var(--body-font);
+    border-top: 4px solid var(--gold-accent);
 }
 
 footer p {
@@ -123,8 +128,8 @@ footer p {
     padding: 16px;
     padding-top: 40px;
     order: -1;
-    font-family:'Oswald', sans-serif;
-    color:#941100;
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .hero img.background {
@@ -144,7 +149,7 @@ footer p {
     width: 100%;
     padding: 16px 32px;
     margin: 0;
-    background-color:rgb(230, 179, 79, 0.6);
+    background-color: var(--gold-accent-overlay);
     backdrop-filter: blur(4px);
     display: flex;
     flex-direction: row;
@@ -164,7 +169,7 @@ footer p {
     text-align: left;
     line-height: 1.7;
     color: rgb(60, 34, 1);
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .hero article img {
@@ -192,7 +197,7 @@ footer p {
     padding-bottom: 12px;
     border-bottom: 2px solid rgba(0,0,0,0.08);
     font-family: "Chelsea Market", system-ui;
-    color: #941100;
+    color: var(--secondary-color);
 }
 
 .history img {
@@ -213,7 +218,7 @@ footer p {
     justify-self: center;
     line-height: 1.7;
     padding: 0 12px;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     font-size: 2vh;
     font-weight: normal;
 }
@@ -231,8 +236,8 @@ footer p {
     margin-bottom: 8px;
     padding-bottom: 12px;
     border-bottom: 2px solid rgba(0,0,0,0.08);
-    font-family: 'Oswald', sans-serif;
-    color: #941100;
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .adventure figure {
@@ -260,7 +265,7 @@ footer p {
 .adventure figcaption {
     text-align: center;
     padding: 4px;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     font-size: 2vh;
     font-weight: normal;
 }
@@ -270,8 +275,8 @@ main section h2 {
     padding: 16px;
     text-align: center;
     opacity: 0.85;
-    font-family:'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .main-contact {
@@ -291,21 +296,21 @@ main section h2 {
     text-align: center;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    border-left: 4px solid rgb(148, 17, 0);
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--secondary-color);
     background-color: #fafafa;
 }
 
 .contact h1 {
     margin-bottom: 16px;
     font-family: "Chelsea Market", system-ui;
-    color: rgb(148, 17, 0);
+    color: var(--secondary-color);
 }
 
 .contact article p {
     margin: 6px 0;
     line-height: 1.8;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: #333;
 }
 
@@ -324,8 +329,8 @@ main section h2 {
 
 .form h2 {
     margin-bottom: 10px;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .form form {
@@ -343,7 +348,7 @@ main section h2 {
 .form-group label {
     font-weight: bold;
     font-size: 14px;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: #222;
 }
 
@@ -356,7 +361,7 @@ main section h2 {
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 14px;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: #222;
     background-color: #f9f9f9;
     transition: border 0.2s, box-shadow 0.2s;
@@ -365,8 +370,8 @@ main section h2 {
 .form-group input[type="text"]:focus,
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
-    border-color: rgb(148, 17, 0);
-    box-shadow: 0 0 0 3px rgba(148, 17, 0, 0.15);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px var(--secondary-color-mid);
     outline: none;
 }
 
@@ -387,7 +392,7 @@ main section h2 {
     gap: 8px;
     font-weight: normal;
     font-size: 14px;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: #333;
 }
 
@@ -400,26 +405,26 @@ main section h2 {
 
 .checkbox-group label {
     font-weight: normal;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: #333;
 }
 
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: rgb(148, 17, 0);
+    background-color: var(--secondary-color);
     color: #fff;
     border: none;
     border-radius: 6px;
     font-size: 14px;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
 }
 
 button[type="submit"]:hover {
-    background-color: rgba(148, 17, 0, 0.85);
+    background-color: var(--secondary-color-hover);
     transform: translateY(-1px);
 }
 
@@ -431,8 +436,8 @@ button[type="submit"]:hover {
 
 .map h2 {
     margin-bottom: 10px;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .map iframe {
@@ -454,8 +459,8 @@ button[type="submit"]:hover {
     grid-column: 1 / -1;
     text-align: center;
     margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .employees figure {
@@ -483,7 +488,7 @@ button[type="submit"]:hover {
     max-width: 220px;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    border: 2px solid rgb(230, 179, 78);
+    border: 2px solid var(--gold-accent);
     border-radius: 8px;
     padding: 4px;
 }
@@ -492,8 +497,8 @@ button[type="submit"]:hover {
     text-align: center;
     padding: 4px;
     font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--body-font);
+    color: var(--secondary-color);
     font-size: 1rem;
 }
 .home img {
@@ -524,7 +529,7 @@ button[type="submit"]:hover {
   font-size: 5vw;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(3, 1, 62, 0.6);
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--heading-font);
   color: white;
 }
 
@@ -540,7 +545,8 @@ button[type="submit"]:hover {
   cursor: pointer;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  font-family: 'Trebuchet MS', sans-serif; font-weight: bold;
+  font-family: var(--body-font);
+  font-weight: bold;
   width: auto;
 }
 
@@ -564,10 +570,10 @@ button[type="submit"]:hover {
     grid-row: 4;
 }
 .content h2{
-  color: rgb(148, 17, 0);
+  color: var(--secondary-color);
   font-size: 1.8rem;
   margin-bottom: 28px;
-  font-family:  'Oswald', sans-serif;
+  font-family: var(--heading-font);
   letter-spacing: 0.5px;
   text-align: center;
   align-self: center;
@@ -591,10 +597,10 @@ button[type="submit"]:hover {
 }
 
 .newsletter h2 {
-  color:  rgb(148, 17, 0);
+  color: var(--secondary-color);
   font-size: 1.8rem;
   margin-bottom: 28px;
-  font-family:  'Oswald', sans-serif;
+  font-family: var(--heading-font);
   letter-spacing: 0.5px;
 }
 
@@ -605,10 +611,10 @@ button[type="submit"]:hover {
 }
 
 .newsletter label {
-  color:  rgb(148, 17, 0);
+  color: var(--secondary-color);
   font-size: 0.85rem;
   text-align: left;
-  font-family: 'Trebuchet MS', sans-serif; 
+  font-family: var(--body-font);
 }
 
 .newsletter input {
@@ -617,7 +623,7 @@ button[type="submit"]:hover {
   padding: 12px 16px;
   border-radius: 8px;
   background: #efefef;
-  color:  rgb(148, 17, 0);
+  color: var(--secondary-color);
   font-size: 0.95rem;
   outline: none;
   box-sizing: border-box;
@@ -625,13 +631,13 @@ button[type="submit"]:hover {
 
 .newsletter input:focus {
 
-  box-shadow: 0 0 0 3px  rgb(148, 17, 0);
+  box-shadow: 0 0 0 3px var(--secondary-color);
 }
 
 .newsletter button {
     margin-top: 6px;
     padding: 13px;
-    background: rgb(230, 179, 79);
+    background: var(--gold-accent);
     color: #1a1a1a;
     border: none;
     border-radius: 8px;
@@ -639,11 +645,11 @@ button[type="submit"]:hover {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.1s ease;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .newsletter button:hover {
-  background:  rgb(148, 17, 0);
+  background: var(--secondary-color);
   transform: translateY(-1px);
 }
 
@@ -659,13 +665,13 @@ button[type="submit"]:hover {
     object-fit: cover;
 }
 .text-1{
-    font-family: 'Trebuchet MS', sans-serif; 
+    font-family: var(--body-font);
     font-size: 2.4vh;
     grid-column: 1/3;
     text-align: center;
 }
 .text-2{
-    font-family: 'Trebuchet MS', sans-serif; 
+    font-family: var(--body-font);
     font-size: 2.4vh;
     text-align: right;
     grid-column: 1;
@@ -682,19 +688,19 @@ button[type="submit"]:hover {
     text-align: center;
     background-color: #fafafa;
     border-radius: 10px;
-    border-left: 4px solid rgb(230, 179, 78);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--gold-accent);
+    box-shadow: var(--card-shadow);
 }
 
 .call h2 {
     margin-bottom: 12px;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .call p {
     margin-bottom: 20px;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: #333;
     line-height: 1.7;
 }
@@ -702,17 +708,17 @@ button[type="submit"]:hover {
 .call a {
     display: inline-block;
     padding: 12px 28px;
-    border: 2px solid rgb(148, 17, 0);
-    color: rgb(148, 17, 0);
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     border-radius: 6px;
     transition: background 0.2s, color 0.2s;
 }
 
 .call a:hover {
-    background-color: rgb(148, 17, 0);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 
@@ -720,14 +726,14 @@ hr {
     width: 840px;
     margin: 0 auto;
     border: none;
-    border-top: 2px solid rgba(148, 17, 0, 0.15);
+    border-top: 2px solid var(--secondary-color-mid);
 }
 
 .plans h2 {
     margin-bottom: 30px;
     text-align: center;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .plans article {
@@ -737,7 +743,7 @@ hr {
     gap: 12px 24px;
     margin-bottom: 36px;
     padding-bottom: 36px;
-    border-bottom: 1px solid rgba(148, 17, 0, 0.15);
+    border-bottom: 1px solid var(--secondary-color-mid);
 }
 
 .plans article:last-child {
@@ -747,9 +753,9 @@ hr {
 .plans article h3 {
     grid-column: 1 / -1;
     margin-bottom: 4px;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
-    border-left: 3px solid rgb(230, 179, 78);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    border-left: 3px solid var(--gold-accent);
     padding-left: 10px;
 }
 
@@ -759,36 +765,36 @@ hr {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 2px solid rgb(230, 179, 78);
+    border: 2px solid var(--gold-accent);
 }
 
 .plans article p {
     align-self: center;
     line-height: 1.7;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     color: #333;
 }
 
 .comparison h2 {
     text-align: center;
     margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(148, 17, 0);
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
 }
 
 .comparison table {
     width: 100%;
     border-collapse: collapse;
     border: none;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
 }
 
 .comparison th {
     padding: 12px 16px;
     text-align: center;
-    background-color: rgb(148, 17, 0);
+    background-color: var(--secondary-color);
     color: #fff;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: var(--body-font);
     font-weight: bold;
 }
 
@@ -800,13 +806,13 @@ hr {
 }
 
 .comparison thead tr {
-    background-color: rgb(148, 17, 0);
+    background-color: var(--secondary-color);
 }
 
 .comparison tbody tr:nth-child(even) {
-    background-color: rgba(230, 179, 78, 0.1);
+    background-color: var(--gold-accent-light);
 }
 
 .comparison tbody tr:hover {
-    background-color: rgba(148, 17, 0, 0.07);
+    background-color: var(--secondary-color-light);
 }
