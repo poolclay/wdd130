@@ -123,6 +123,7 @@ footer p {
 }
 
 .hero h1 {
+    position: absolute;
     text-align: center;
     width: 100%;
     padding: 16px;
@@ -142,6 +143,7 @@ footer p {
 
 
 .hero article {
+    float: right;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -173,6 +175,7 @@ footer p {
 }
 
 .hero article img {
+    float: right;
     width: 90px;
     height: 90px;
     flex-shrink: 0;
